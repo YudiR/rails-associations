@@ -1,0 +1,9 @@
+<h1>Appointment</h1>
+<%= link_to "Delete", @appointment, method: :delete, data: {confirm: "Are you sure you want to delete this picture?"}  %>
+<p><%= @appointment.patient.name %></p>
+<p><%= @appointment.physician.name %></p>
+<p><%= @appointment.time %></p>
+
+
+
+

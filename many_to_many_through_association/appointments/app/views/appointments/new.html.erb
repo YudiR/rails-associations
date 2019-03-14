@@ -1,0 +1,18 @@
+<h1>Add an appoinment</h1>
+<%= form_for @appointment do |f| %>
+  <p>
+    <%= f.select :physician_id, Physician.all.collect{ |p| [ p.name, p.id ] } ,include_blank: true%>
+
+    </p>
+  <p>
+  <%= f.select :patient_id, Patient.all.collect{ |p| [ p.name, p.id ] } ,include_blank: true%>
+
+  </p>
+  <p>
+    <%= f.label :time %><br>
+    <%= f.date_field :time %>
+  </p>
+  <p>
+    <%= f.submit "Save" %>
+  </p>
+<% end %>

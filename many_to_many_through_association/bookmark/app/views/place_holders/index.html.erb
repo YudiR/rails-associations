@@ -1,0 +1,7 @@
+<h1>BookMarks</h1>
+<% @place_holders.each do |place_holder| %>
+<p>Title of Article:<%=place_holder.article.title %></p>
+<p>Users name: <%=place_holder.user.name %> </p>
+<p>Users email: <%=place_holder.user.email %> </p>
+<p>Time of bookMark: <%=place_holder.time %> </p>
+<%end %>

@@ -1,0 +1,10 @@
+<h1>Users</h1>
+
+<%@users.each do |user| %>
+    <p>Users name:<%=user.name %></p>
+    
+    <% user.place_holders.each do |place_holder| %>
+      <p>Time of Bookmarking <%=place_holder.time %></p>
+      <p>Article Title:<%= place_holder.article.title%></p>
+    <% end %>
+<%end %>

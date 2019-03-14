@@ -1,0 +1,13 @@
+<h1>Physicians</h1>
+<% @physicians.each do |physician| %>
+
+   <p> Doctor: </p> 
+    <p><%= physician.name%></p>
+    <p> Patient: </p>
+    <%physician.patients.distinct.each do |patient| %>
+    
+        <p> <%=patient.name%></p>
+    <%end%>
+
+<% end %>
+

@@ -1,0 +1,8 @@
+<h1>Article</h1>
+<p><%= @article.title %></p>
+    <% @article.place_holders.each do |place_holder| %>
+        <p><%= place_holder.time%></p>
+        <p><%= place_holder.user.name%>
+    <%end%>
+    
+   
